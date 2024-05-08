@@ -10,6 +10,6 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "readline-sync": "^1.4.10"
-  }
-}
+    "readline-sync": "^1.4.10",
+    "game-brainbro": "^0.0.0"
+  }}
