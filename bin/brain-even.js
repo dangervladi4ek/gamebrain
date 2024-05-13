@@ -1,31 +1,18 @@
-import { welcomeUser } from '../src/cli.js';
-import readlineSync from 'readline-sync';
+#!/usr/bin/env node
+import randomizeGenerator from '../src/randomNumbers.js';
+import startGame from '../src/startGame.js';
 
-function isEven(num) {
-    return num % 2 === 0;
-}
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function playBrainEven() {
-    welcomeUser();
+const isEven = (number) => number % 2 === 0;
 
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const getAnswerAndQuestion = () => {
+  const question = randomizeGenerator(1, 10);
+  const rightAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, rightAnswer];
+};
 
-    const minNumber = 1;
-    const maxNumber = 100;
-    const randomNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1) + minNumber);
-
-    console.log(`Question: ${randomNumber}`);
-    const userAnswer = readlineSync.question('Your answer: ');
-
-    const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
-
-    if (userAnswer === correctAnswer) {
-        console.log('Correct!');
-        console.log('Congratulations!');
-    } else {
-        console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-        console.log("Let's try again!");
-    }
-}
-
-playBrainEven();
+const brainEven = () => {
+  startGame(description, getAnswerAndQuestion);
+};
+brainEven();

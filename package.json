@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
+  },
   "dependencies": {
     "readline-sync": "^1.4.10",
     "game-brainbro": "^0.0.0"
