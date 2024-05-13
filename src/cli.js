@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-// eslint-disable-next-line import/no-mutable-exports
+
 export let name = '';
 
 export const getName = () => {
