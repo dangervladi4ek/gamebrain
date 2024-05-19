@@ -14,6 +14,7 @@
     "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
-    "readline-sync": "^1.4.10",
-    "game-brainbro": "^0.0.0"
-  }}
+    "game-brainbro": "^0.0.0",
+    "readline-sync": "^1.4.10"
+  }
+}

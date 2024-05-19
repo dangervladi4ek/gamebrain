@@ -1,5 +1,5 @@
-import generatorNums from '../src/generateRandomNums.js';
-import runGameFunc from '../src/playGame.js';
+import generatorNums from '../src/genrannum.js';
+import runGameFunc from '../src/gameplay.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
